@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume</title>
+    <link rel="StyleSheet" href="style.css">
+</head>
+<body>
+    <h1>Shareable Resume with Unique URL</h1>
+    <form id="resume-form">
+
+        <fieldset>
+
+            <legend>Personal Information</legend>
+
+            <label for="username">Your Resume URL:</label>
+            <input type="text" id="username" name="username" placeholder="Your Username" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Your Phone Number" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+
+        </fieldset>
+
+        <fieldset>
+            
+            <legend>Education</legend>
+            
+            <label for="institute-name">Institue Name:</label>
+            <input type="text" id="institue-name" name="institute-name" placeholder="Your Institute Name"><br><br>
+
+            <label for="field-of-study">Field of Study:</label>
+            <input type="text" id="field-of-study" name="study-field" placeholder="Computer Science or Other"><br><br>
+
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" name="degree" placeholder="E.g: BS/BSCS"><br><br>
+
+            <label for="completion-year">Completion Year:</label>
+            <input type="number" id="completion-year" name="completion-year" placeholder="E.g: 2023/2024"><br><br>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Skills</legend>
+
+            <label for="skills-list">List Your Skills:</label>
+            <textarea id="skills-list" name="skills-list" placeholder="E.g: HTML, CSS, TypeScript" rows="4"></textarea><br><br>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Work Experience</legend>
+
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" name="job-title" placeholder="Your Job Title"><br><br>
+
+            <label for="company-name">Company Name:</label>
+            <input type="text" id="company-name" name="company-name" placeholder="Your Company"><br><br>
+
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" placeholder="E.g: April 2024 - Past"><br><br>
+
+        </fieldset>
+
+        <button id="submit">Generate Resume</button>
+    </form>
+
+    <div id="resume-display"></div> <!-- Div to display the generated resume -->
+
+    <div id="shareable-link-container" style="display: none;">
+        <h2>Shareable Link</h2>
+        <p>Your shareable resume link:</p>
+        <a href="${uniqueUrl}" id="shareable-link" target="_blank">${uniqueUrl}</a>
+        <br>
+        <button id="download-pdf"><b>Download as PDF</b></button>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+
+</body>
+</html>
+
+
+
+
+
